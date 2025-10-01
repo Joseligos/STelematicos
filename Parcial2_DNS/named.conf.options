@@ -1,0 +1,15 @@
+options {
+    directory "/var/cache/bind";
+
+    forwarders {
+        192.168.56.5;    // Maestro
+        192.168.56.4;    // Esclavo
+    };
+    forward only;
+    recursion yes;
+    dnssec-validation no;
+    auth-nxdomain no;
+    listen-on { any; };
+    allow-query { any; };	
+};
+
